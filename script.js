@@ -15,8 +15,6 @@ function page3() {
             let imgSrc = el.getAttribute('img1');
             image.src = imgSrc;
             image.style.display = 'block';
-
-            console.log(image);
         });
     });
     elems.forEach((el) => {
@@ -29,6 +27,7 @@ function page3() {
         });
     });
 }
+page3()
 
 const right_img = document.querySelector('#right-img')
 let line = document.querySelector('#line')

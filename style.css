@@ -26,18 +26,20 @@ h2 {
 html,
 body {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    overflow-x: hidden;
+    
 }
 
 #page1 {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
     position: relative;
     /* padding: 26px; */
     /* background-color: red; */
     padding: 1vw 4vw;
-    overflow: hidden;
+
 }
 
 nav {
@@ -56,6 +58,7 @@ nav {
 
 #main {
     background-color: #EFEAE3;
+  
 }
 
 #nav-part2 {
@@ -163,6 +166,7 @@ nav {
     border-bottom-left-radius: 50%;
     position: absolute;
     filter: blur(15px);
+    z-index: 1;
 }
 
 #hero-2 {
@@ -176,6 +180,7 @@ nav {
     animation: anime2 2s linear infinite alternate;
     /* border: 3px solid; */
     /* background-color: rebeccapurple; */
+    z-index: 1;
 }
 
 #hero-3 {
@@ -190,6 +195,7 @@ nav {
     animation: anime 2s linear infinite alternate;
     filter: blur(24px);
     top: 30px;
+    z-index: 1;
 }
 
 @keyframes anime {
@@ -215,9 +221,10 @@ nav {
 #page2 {
     min-height: 100vh;
     width: 100%;
-    background-color: #EFEAE3;
+    /* background-color: #EFEAE3; */
     padding: 8vw 0;
     position: relative;
+    z-index: 55;
 }
 
 #moving-text {
@@ -346,6 +353,7 @@ nav {
     background-color: #EFEAE3;
     padding: 3vw, 0;
     position: relative;
+
 }
 
 .elem {
@@ -387,11 +395,13 @@ nav {
     height: 60vh;
     overflow: hidden;
     /* position: absolute; */
-    position: fixed;
-    z-index: 10;
+    position: absolute;
+    z-index: 1111;
     border-radius: 10px;
     left: 55vw;
-    top: 10vw;
+    top: 20%;
+
+    display: hidden;
 }
 
 .fixed-img img {
@@ -557,7 +567,7 @@ nav {
 }
 
 #footer {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     position: fixed;
     background-color: black;
@@ -1025,7 +1035,9 @@ label {
 
 
 
-@media (max-width:600px) {
+@media  (max-width:600px) {
+
+
     #nav-part2 {
         display: flex;
         border: 2px solid;
@@ -1314,3 +1326,13 @@ label {
         opacity: 0;
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    
+    #page1{
+        height: 76vh;
+
+
+    }
+    
+  }
