@@ -14,6 +14,10 @@
     box-sizing: border-box;
 
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 h1 {
     font-family: 'okay';
@@ -827,7 +831,7 @@ label {
         position: absolute;
         left: 0;
         justify-content: center;
-        top: -100vw;
+        top: -100%;
         height: 40%;
         flex-direction: column;
         align-items: flex-end;
@@ -1038,6 +1042,13 @@ label {
 @media  (max-width:600px) {
 
 
+    .footer-1st-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+    }
+
     #nav-part2 {
         display: flex;
         border: 2px solid;
@@ -1134,7 +1145,7 @@ label {
 
     #center #left h3 {
         font-size: 4vw;
-        line-height: 3vw;
+        line-height: 4vw;
         width: 170%;
     }
     #bottom-hero2 p {
@@ -1237,8 +1248,8 @@ label {
         padding-left: 2vw;
     }
     .footer-1st-1 h2{
-        font-size: 7vw;
-        line-height: 9vw;
+        font-size: 20vw;
+        line-height: 17vw;
     }
     .footer-1st-2 p{
         font-family: 'roman';
@@ -1262,12 +1273,14 @@ label {
     }
     .footer-bottom-last h4{
         font-family: 'roman';
-        font-size: 4vw;
-        padding: 1vw 6vw;
+        font-size: 3vw;
+        padding: 1vw 5vw;
+        /* padding: 1vw 2vw; */
         
     }
     .footer-bottom-last{
         flex-wrap: wrap;
+        width:100%;
     }
 
 } 
@@ -1331,8 +1344,15 @@ label {
     
     #page1{
         height: 76vh;
-
-
     }
     
+    #nav-part2{
+        height: 70vw;
+    }
+    #moving-text{
+        margin: 5vw 2vw;
+    }
+    #page1 img{
+        width: 30vw;
+    }
   }

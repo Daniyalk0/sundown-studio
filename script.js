@@ -1,10 +1,12 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('#main'),
-        smooth: true
-    });
-})
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const scroll = new LocomotiveScroll({
+//         el: document.querySelector('#main'),
+//         smooth: true
+//     });
+// })
 
+
+  
 let elems = document.querySelectorAll('.elem');
 let image = document.querySelector('#immg');
 
@@ -86,19 +88,35 @@ page3()
 swiperAnimation()
 
 
-const menu = document.querySelector('#menu')
-const center = document.querySelector('#center')
-const navpart2 = document.querySelector('#nav-part2')
-menu.addEventListener('click',()=>{
-   if (navpart2.style.top === '-100vw') {
-    navpart2.style.top = '0vw'
-    center.style.filter = 'blur(20px)'
-}else{
-    navpart2.style.top = '-100vw'
-    center.style.filter = 'blur(0px)'
+const menu = document.querySelector('#menu');
+const center = document.querySelector('#center');
+const navpart2 = document.querySelector('#nav-part2');
+
+function toggleNav() {
+    if (navpart2.style.top === '-100%') {
+        // Show navigation and apply styles
+        navpart2.style.top = '0%';
+        center.style.filter = 'blur(20px)';
+        menu.style.color = 'white';
+    } else {
+        // Revert styles
+        menu.style.color = '';
+        navpart2.style.top = '-100%';
+        center.style.filter = 'blur(0px)';
+    }
+    console.log('Navigation toggled');
 }
-   console.log('nav');
-})
+
+// Add event listeners to both #menu and #center
+menu.addEventListener('click', toggleNav);
+center.addEventListener('click', () => {
+    // Always apply the "else" case
+    menu.style.color = '';
+    navpart2.style.top = '-100%';
+    center.style.filter = 'blur(0px)';
+    console.log('Center clicked: Reverting styles');
+});
+
 
 var loader = document.querySelector("#loader")
     setTimeout(function () {
